@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ES" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmpresaNoticias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#6366F1',
+                    secondary: '#0F172A'
+                },
+                animation: {
+                    'gradient': 'gradient 8s linear infinite',
+                },
+                keyframes: {
+                    gradient: {
+                        '0%, 100%': {
+                            'background-size': '200% 200%',
+                            'background-position': 'left center'
+                        },
+                        '50%': {
+                            'background-size': '200% 200%',
+                            'background-position': 'right center'
+                        }
+                    }
+                }
+            }
+        }
+    }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .gradient-border {
+                border-image: linear-gradient(to right, #6366F1, #3B82F6) 1;
+            }
+            .text-glow {
+                text-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+            }
+            .bg-glass {
+                backdrop-filter: blur(12px);
+                background: rgba(255, 255, 255, 0.05);
+            }
+        }
+    </style>
+    
+    
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen">
+    <!-- Animated Background -->
+    <div class="fixed inset-0 -z-10">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),rgba(15,23,42,0))]"></div>
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+    </div>
+
+    <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 z-50 bg-glass border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <p class="text-gray-300">¡Hola! 🍪 Este sitio web utiliza cookies para mejorar tu experiencia de navegación. Al hacer clic en &#34;Aceptar&#34;, aceptas el uso de cookies de acuerdo con nuestra política de privacidad. Puedes cambiar tus preferencias en cualquier momento. ¡Gracias por visitarnos! 📰 #CumplimosConLaLeyGT</p>
+                <button onclick="acceptCookies()" class="px-6 py-2 bg-primary hover:bg-primary/80 text-white rounded-full transition-all duration-300 shadow-lg shadow-primary/25">
+                    Aceptar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header with glass effect -->
+    <header class="sticky top-0 z-40 bg-glass border-b border-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-between h-20 px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center space-x-8">
+                    <a href="/" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-r from-primary to-blue-500 flex items-center justify-center">
+                            <span class="text-xl font-bold text-white">E</span>
+                        </div>
+                        <span class="text-xl font-bold text-glow">EmpresaNoticias</span>
+                    </a>
+                </div>
+                
+                <nav class="hidden md:flex items-center space-x-6">
+                    
+                    
+                        
+                            
+                            <a href="article_maximizando_el_potencial_de_las_inversiones_en_la_empresa_79aff8e7.html"
+                               class="relative px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200
+                                before:absolute before:inset-0 before:rounded-lg before:bg-primary/10 before:opacity-0
+                                before:transition-opacity hover:before:opacity-100">
+                                Inversión
+                            </a>
+                        
+                            
+                            <a href="article_maximizando_el_potencial_inversiones_en_la_empresa_86ad5e32.html"
+                               class="relative px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200
+                                before:absolute before:inset-0 before:rounded-lg before:bg-primary/10 before:opacity-0
+                                before:transition-opacity hover:before:opacity-100">
+                                Empresa
+                            </a>
+                        
+                            
+                            <a href="article_la_importancia_de_las_inversiones_en_la_empresa_d58b4db5.html"
+                               class="relative px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200
+                                before:absolute before:inset-0 before:rounded-lg before:bg-primary/10 before:opacity-0
+                                before:transition-opacity hover:before:opacity-100">
+                                Finanzas
+                            </a>
+                        
+                            
+                            <a href="article_inversiones_en_la_empresa_clave_para_el_crecimiento_y_la_estabilidad_financiera_1f95fb68.html"
+                               class="relative px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200
+                                before:absolute before:inset-0 before:rounded-lg before:bg-primary/10 before:opacity-0
+                                before:transition-opacity hover:before:opacity-100">
+                                Capital
+                            </a>
+                        
+                            
+                            <a href="article_invertir_en_la_empresa_clave_para_el_exito_financiero_25d7fe3b.html"
+                               class="relative px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200
+                                before:absolute before:inset-0 before:rounded-lg before:bg-primary/10 before:opacity-0
+                                before:transition-opacity hover:before:opacity-100">
+                                Riesgo
+                            </a>
+                        
+                    
+                 </nav>
+
+                <div class="flex items-center space-x-4">
+                    <button class="md:hidden relative p-2 text-gray-300 hover:text-white transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                    <div class="hidden md:block">
+                        <button class="relative px-4 py-2 text-sm font-medium bg-primary hover:bg-primary/80 text-white rounded-full transition-all duration-300 shadow-lg shadow-primary/25">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <!-- Main Content -->
+            <div class="w-full lg:w-2/3 space-y-12">
+                <!-- Featured Article -->
+                
+                <div class="relative group">
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-primary to-blue-500 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000"></div>
+                    <div class="relative bg-gray-900 rounded-2xl p-8">
+                        
+                        <div class="aspect-w-16 aspect-h-9 mb-8 rounded-xl overflow-hidden">
+                            <img src="images/preview_image_1.jpg" alt="Maximizando el Potencial de las Inversiones en la Empresa" 
+                                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <span class="px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">Featured</span>
+                                <span class="text-gray-400">Alejandro Sánchez</span>
+                            </div>
+                            <h2 class="text-2xl font-bold">Maximizando el Potencial de las Inversiones en la Empresa</h2>
+                            <p class="text-gray-400">Introducción
+
+Las inversiones en una empresa juegan un papel fundamental en su crecimiento y desarrollo a largo plazo. Ya sea a través de la adquisición de activos, la expansión de operaciones o la im...</p>
+                            <a href="article_maximizando_el_potencial_de_las_inversiones_en_la_empresa_79aff8e7.html" class="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors">
+                                <span>Read More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Article Grid -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    
+                    <article class="group bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-primary/50 transition-all duration-300">
+                        
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="images/preview_image_2.jpg" alt="Maximizando el Potencial: Inversiones en la Empresa" 
+                                 class="w-full h-48 object-cover transform group-hover:scale-105 transition duration-700">
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <i class="fas fa-user-edit text-primary"></i>
+                                </div>
+                                <span class="text-gray-400 text-sm">Julia Serrano</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Maximizando el Potencial: Inversiones en la Empresa</h3>
+                            <p class="text-gray-400 mb-4">Introducción
+
+Las inversiones en una empresa son fundamentales para su crecimiento y desarrollo a largo plazo. A través de la asignación estratégica de recursos financieros, una empresa puede expandir...</p>
+                            <div class="flex justify-between items-center">
+                                <a href="article_maximizando_el_potencial_inversiones_en_la_empresa_86ad5e32.html" class="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors">
+                                    <span>Read Article</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <span class="text-gray-500 text-sm">5 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="group bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-primary/50 transition-all duration-300">
+                        
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="images/preview_image_3.jpg" alt="La Importancia de las Inversiones en la Empresa" 
+                                 class="w-full h-48 object-cover transform group-hover:scale-105 transition duration-700">
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <i class="fas fa-user-edit text-primary"></i>
+                                </div>
+                                <span class="text-gray-400 text-sm">Sofía Martínez</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">La Importancia de las Inversiones en la Empresa</h3>
+                            <p class="text-gray-400 mb-4">Introducción
+
+Las inversiones en una empresa son fundamentales para su crecimiento y desarrollo a largo plazo. Consisten en destinar recursos financieros a proyectos, activos o iniciativas que generen...</p>
+                            <div class="flex justify-between items-center">
+                                <a href="article_la_importancia_de_las_inversiones_en_la_empresa_d58b4db5.html" class="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors">
+                                    <span>Read Article</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <span class="text-gray-500 text-sm">5 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="group bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-primary/50 transition-all duration-300">
+                        
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="images/preview_image_4.jpg" alt="Inversiones en la empresa: Clave para el crecimiento y la estabilidad financiera" 
+                                 class="w-full h-48 object-cover transform group-hover:scale-105 transition duration-700">
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <i class="fas fa-user-edit text-primary"></i>
+                                </div>
+                                <span class="text-gray-400 text-sm">Luisa García</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Inversiones en la empresa: Clave para el crecimiento y la estabilidad financiera</h3>
+                            <p class="text-gray-400 mb-4">Introducción
+
+Las inversiones en una empresa son fundamentales para su desarrollo y éxito a largo plazo. En un entorno empresarial cada vez más competitivo, es crucial que las organizaciones realicen ...</p>
+                            <div class="flex justify-between items-center">
+                                <a href="article_inversiones_en_la_empresa_clave_para_el_crecimiento_y_la_estabilidad_financiera_1f95fb68.html" class="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors">
+                                    <span>Read Article</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <span class="text-gray-500 text-sm">5 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="group bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-primary/50 transition-all duration-300">
+                        
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="images/preview_image_5.jpg" alt="Invertir en la empresa: Clave para el éxito financiero" 
+                                 class="w-full h-48 object-cover transform group-hover:scale-105 transition duration-700">
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <i class="fas fa-user-edit text-primary"></i>
+                                </div>
+                                <span class="text-gray-400 text-sm">Santiago Cortez</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Invertir en la empresa: Clave para el éxito financiero</h3>
+                            <p class="text-gray-400 mb-4">Introducción
+
+En un mercado globalizado y competitivo, las inversiones en una empresa son fundamentales para su crecimiento y desarrollo sostenible a largo plazo. Ya sea a través de la adquisición de ...</p>
+                            <div class="flex justify-between items-center">
+                                <a href="article_invertir_en_la_empresa_clave_para_el_exito_financiero_25d7fe3b.html" class="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors">
+                                    <span>Read Article</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <span class="text-gray-500 text-sm">5 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="w-full lg:w-1/3 space-y-8">
+                <!-- Search -->
+                <div class="relative">
+                    <input type="text" placeholder="Search articles..." 
+                           class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 pl-12 focus:outline-none focus:border-primary/50 transition-all">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                </div>
+
+                <!-- Latest News -->
+                <div class="bg-gray-900 rounded-xl border border-gray-800 p-6">
+                    <h2 class="text-xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-newspaper text-primary mr-3"></i>
+                        Últimas noticias
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        
+                        <a href="https://www.nydailynews.com/" target="_blank" class="group block">
+                            <div class="flex items-center gap-4 p-4 rounded-lg bg-gray-800/50 hover:bg-primary/10 transition-all">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all">
+                                    <i class="fas fa-arrow-right text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium group-hover:text-primary transition-colors">Headline: Aumentan las inversiones en la empresa líder del sector tecnológico.</h3>
+                                    <p class="text-sm text-gray-400">Just now</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.hotair.com/" target="_blank" class="group block">
+                            <div class="flex items-center gap-4 p-4 rounded-lg bg-gray-800/50 hover:bg-primary/10 transition-all">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all">
+                                    <i class="fas fa-arrow-right text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium group-hover:text-primary transition-colors">Titular: Aumentan las inversiones en la empresa líder del sector tecnológico.</h3>
+                                    <p class="text-sm text-gray-400">Just now</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.thehill.com/" target="_blank" class="group block">
+                            <div class="flex items-center gap-4 p-4 rounded-lg bg-gray-800/50 hover:bg-primary/10 transition-all">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all">
+                                    <i class="fas fa-arrow-right text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium group-hover:text-primary transition-colors">Headline: Aumentan las inversiones en startups tecnológicas en España.</h3>
+                                    <p class="text-sm text-gray-400">Just now</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.tampabay.com/" target="_blank" class="group block">
+                            <div class="flex items-center gap-4 p-4 rounded-lg bg-gray-800/50 hover:bg-primary/10 transition-all">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all">
+                                    <i class="fas fa-arrow-right text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium group-hover:text-primary transition-colors">Titular: Aumenta el interés de los inversores por la empresa líder en tecnología.</h3>
+                                    <p class="text-sm text-gray-400">Just now</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.npr.org/" target="_blank" class="group block">
+                            <div class="flex items-center gap-4 p-4 rounded-lg bg-gray-800/50 hover:bg-primary/10 transition-all">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all">
+                                    <i class="fas fa-arrow-right text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium group-hover:text-primary transition-colors">Headline: Auge de inversiones en startups tecnológicas durante el primer trimestre del año.</h3>
+                                    <p class="text-sm text-gray-400">Just now</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+
+                <!-- Newsletter -->
+                <div class="relative group">
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-primary to-blue-500 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-1000"></div>
+                    <div class="relative bg-gray-900 rounded-xl p-6">
+                        <h2 class="text-xl font-bold mb-4">Subscribe to Newsletter</h2>
+                        <p class="text-gray-400 mb-6">Get the latest updates directly to your inbox.</p>
+                        <form class="space-y-4">
+                            <input type="email" placeholder="Enter your email" 
+                                   class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-primary/50">
+                            <button type="submit" 
+                                    class="w-full px-6 py-3 bg-primary hover:bg-primary/80 text-white rounded-lg transition-all duration-300 shadow-lg shadow-primary/25">
+                                Subscribe Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900/50 border-t border-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <a href="/" class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-r from-primary to-blue-500 flex items-center justify-center">
+                            <span class="text-xl font-bold text-white">E</span>
+                        </div>
+                        <span class="text-xl font-bold text-glow">EmpresaNoticias</span>
+                    </a>
+                    <p class="text-gray-400 mb-6">Empowering innovation through technology.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-lg bg-gray-800 hover:bg-primary/20 flex items-center justify-center text-gray-400 hover:text-primary transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-gray-800 hover:bg-primary/20 flex items-center justify-center text-gray-400 hover:text-primary transition-all">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-gray-800 hover:bg-primary/20 flex items-center justify-center text-gray-400 hover:text-primary transition-all">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="privacy_policy.html" class="text-gray-400 hover:text-primary transition-colors">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                política de privacidad
+                            </a>
+                        </li>
+                        <li>
+                            <a href="terms_and_conditions.html" class="text-gray-400 hover:text-primary transition-colors">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                Términos y condiciones
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact_us.html" class="text-gray-400 hover:text-primary transition-colors">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                Contáctenos
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-map-marker-alt w-5"></i>
+                            <span class="ml-2">123 Innovation Street, Tech City</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-phone w-5"></i>
+                            <span class="ml-2">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-envelope w-5"></i>
+                            <span class="ml-2">contact@example.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest news and updates.</p>
+                    <form class="space-y-4">
+                        <div class="relative">
+                            <input type="email" placeholder="Enter your email" 
+                                   class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 pl-12 focus:outline-none focus:border-primary/50">
+                            <i class="fas fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                        </div>
+                        <button type="submit" 
+                                class="w-full px-6 py-3 bg-primary hover:bg-primary/80 text-white rounded-lg transition-all duration-300 shadow-lg shadow-primary/25">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-400">&copy; 2025 EmpresaNoticias. All rights reserved.</p>
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy</a>
+                        <span class="text-gray-600">•</span>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms</a>
+                        <span class="text-gray-600">•</span>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Support</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts_index.js"></script>
+    <script>
+        function acceptCookies() {
+            document.getElementById('cookie-consent').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
